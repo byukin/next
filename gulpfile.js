@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
 	cssmin = require('gulp-cssmin'),
 	htmlprettify = require('gulp-html-prettify'),
+	imagemin = require('gulp-imagemin'),
 	rename = require('gulp-rename');
 
 var path = {
@@ -16,19 +17,24 @@ var path = {
         js: 'master/styles/default/js/',
         css: 'master/styles/default/css/',
         icons: 'master/styles/default/css/icons/',
-		img: 'master/styles/default/css/img/',
+		images: 'master/styles/default/css/images/',
         fonts: 'master/styles/default/css/fonts/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.jade',
         js: 'src/js/main.js',
         css: 'src/style/css/*.styl',
-        img: 'src/style/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        images: 'src/style/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/style/fonts/**/*.*'
     },
 
 };
 
+gulp.task('imagemin', () =>
+    gulp.src('master/styles/default/css/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('master/styles/default/css/images/zip'))
+);
 
 gulp.task('webserver', ['watch'], function() {
   gulp.src('./')
