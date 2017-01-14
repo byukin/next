@@ -1,58 +1,28 @@
-var colors = new Array(
-	[10,10,10],
-	[40,40,40],
-	[50,50,50],
-	[30,30,30]);
+$(document).ready(function() {
+ 	appSite.init();
+});
 
-var step = 0;
-//color table indices for:
-// current color left
-// next color left
-// current color right
-// next color right
-var colorIndices = [0,1,2,3];
 
-//transition speed
-var gradientSpeed = 0.002;
-
-function updateGradient()
-{
-
-  if ( $===undefined ) return;
-
-var c0_0 = colors[colorIndices[0]];
-var c0_1 = colors[colorIndices[1]];
-var c1_0 = colors[colorIndices[2]];
-var c1_1 = colors[colorIndices[3]];
-
-var istep = 1 - step;
-var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-var color1 = "rgb("+r1+","+g1+","+b1+")";
-
-var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-var color2 = "rgb("+r2+","+g2+","+b2+")";
-
- $('body').css({
-   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-
-  step += gradientSpeed;
-  if ( step >= 1 )
-  {
-    step %= 1;
-    colorIndices[0] = colorIndices[1];
-    colorIndices[2] = colorIndices[3];
-
-    //pick two new target color indices
-    //do not pick the same as the current one
-    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-
-  }
-}
-
-setInterval(updateGradient,10);
+var appSite = {
+	init: function() {
+		appSite.bindFullPageScrolling();
+	},
+	bindFullPageScrolling: function () {
+		$(".main-slides").onepage_scroll({
+		   sectionContainer: ".main-item",     // sectionContainer accepts any kind of selector in case you don't want to use section
+		   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+											// "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+		   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+		   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+		   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+		   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+		   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+		   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+		   keyboard: true,                  // You can activate the keyboard controls
+		   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+											// you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+											// the browser's width is less than 600, the fallback will kick in.
+		   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
+		});
+	},
+};
