@@ -1,0 +1,60 @@
+@import url("fonts/roboto/font.css");
+@import url("fonts/play/font.css");
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto Slab';
+  line-height: 1.2;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: #000;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.main {
+  width: 1280px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.main__info {
+  width: 420px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.main__logo {
+  width: 150px;
+  height: 80px;
+  margin-top: 60px;
+  background: url("icons/logo.svg");
+  background-repeat: no-repeat;
+}
+.main__text {
+  font-size: 2.25rem;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main__text span {
+  font-weight: bold;
+}
