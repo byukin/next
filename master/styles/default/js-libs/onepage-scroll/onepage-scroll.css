@@ -1,6 +1,6 @@
 body, html {
   margin: 0;
-  overflow: hidden;
+
   -webkit-transition: opacity 400ms;
   -moz-transition: opacity 400ms;
   transition: opacity 400ms;
@@ -12,15 +12,19 @@ body, .onepage-wrapper, html {
   padding: 0;
   width: 100%;
   height: 100%;
+
 }
 
 .onepage-wrapper {
   width: 100%;
   height: 100%;
+	overflow: hidden;
   display: block;
   position: relative;
   padding: 0;
   -webkit-transform-style: preserve-3d;
+	min-width: 960px;
+
 }
 
 .onepage-wrapper .section {

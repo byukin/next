@@ -9,22 +9,104 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(href="styles/default/css/style.css",rel="stylesheet")
 	body
-		section.header
-			.layout
-				.header__logo Шапка
-				.header__anchors
-				.header__geo
-				.header__contact
-				.header__modals
-		section.main-slides
-			.main-item.main-first
-				.layout 123
-			.main-item.main-second
-				.layout 456
-			.main-item.main-third
-				.layout 789
-		section.footer
-		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
-		script(src="styles/default/js-libs/onepage-scroll/jquery.onepage-scroll.min.js")
+		.layout
+			section.header
+				.header-logo
+				.header-anchors
+					ul
+						li
+							a(href="#") Продвижение<br>сайтов под ключ
+						li
+							a(href="#") Классическое<br>продвижение сайтов
+						li
+							a(href="#") Разработка<br>сайтов
+				.header-geo
+					.header-geo__cities
+						ul
+							li.header-geo__city Москва
+							li.header-geo__city.active Казань
+							li.header-geo__city Россия
+					.header-geo__phone <span>+7 (843)</span> 555 05 05
+				.header-contact
+				.header-modals
+			section.main-first(data-page-scroll).active
+				.main-first__left
+					.main-first__title Решаем задачу<br>увеличения продаж
+					.main-first__subtitle от 35 000 ₽ в месяц
+					.main-first-form
+						.main-first-form__title Готовы<br>к лучшим результатам?
+						form(action="" method="POST")
+							input(type="text" name="Name" placeholder="Имя").main-first-form__input
+							input(type="text" name="Phone" placeholder="Телефон" required).main-first-form__input
+							input(type="text" name="Mail" placeholder="Электронный адрес").main-first-form__input
+							input(type="text" name="Link" placeholder="Ссылка на сайт").main-first-form__input
+							button(type="submit").main-first-form__submit Оставить заявку
+							button(type="submit").main-first-form__submit.sale Хочу со скидкой
+				.main-first__right
+					.main-first-content
+						.main-first-content__block
+							h2 Ярко
+							| Сделаем так, чтобы среди всех Ваших конкурентов заметили именно Вас
+						.main-first-content__block
+							h2 Эффективно
+							| Задействуем все инструменты для достижения максимальных результатов
+						.main-first-content__block
+							h2 Ответственно
+							| Работаем в соответствии с зафиксированными в договоре гарантированными показателями эффективности
+					.main-first-links
+						.main-first-links__nav
+							.main-first-links__label Узнать больше
+							ul
+								li.main-first-links__link
+									a(href="") Как это работает
+								li.main-first-links__link
+									a(href="") Почему это работает
+								li.main-first-links__link
+									a(href="") Портфолио
+						.main-first-links__news
+							.main-first-links__label Актуально
+							.main-first-links__article
+								.main-first-links__date 10/12
+								.main-first-links__title
+									a(href="") Ребрендинг Next Promo: как это было и чем это закончилось
+						.main-first-links__partners
+							.main-first-links__label С нами работают
+
+
+
+			section.main-second(data-page-scroll).active
+				.main-second__content
+					.main-second__top
+						.main-second__title Продвижение сайта<br>с мгновенными результами
+						.main-second__subtitle от 20 000 ₽ в месяц
+					.main-second__left
+						.main-second-form
+							.main-second-form__title Готовы<br>к лучшим результатам?
+							form(action="" method="POST")
+								input(type="text" name="Name" placeholder="Имя").main-second-form__input
+								input(type="text" name="Phone" placeholder="Телефон" required).main-second-form__input
+								input(type="text" name="Mail" placeholder="Электронный адрес").main-second-form__input
+								input(type="text" name="Link" placeholder="Ссылка на сайт").main-second-form__input
+								button(type="submit").main-second-form__submit Оставить заявку
+								button(type="submit").main-second-form__submit.sale Хочу со скидкой
+					.main-second__right
+						.main-second-content
+							.main-second-content__block
+								h2 Продвижение в поисковых системах
+								| Вывод сайта в ТОП Яндекса и Google. Привлечение наиболее заинтересованных посетителей
+							.main-second-content__block
+								h2 Контекстная реклама
+								| Быстрое привлечение на сайт посетителей с рекламных объявлений в поиске и на сторонних сайтах
+							.main-second-content__block
+								h2 Доработки и сопровождение сайта
+								| Улучшаем сайт для людей, чтобы еще больше посетителей стали Вашими клиентами
+						.main-second-advantages
+							.main-second-advantages__item.advantages-icon__1 Продвижение в одном или нескольких регионах, по всей России
+							.main-second-advantages__item.advantages-icon__2 Неограниченное количество п родвигаемых ключевых слов
+							.main-second-advantages__item.advantages-icon__3 Регулярнаая отчетность на основе сервисов Яндекс.Метрика и TopVisor
+							.main-second-advantages__item.advantages-icon__4 Фиксированная стоимость и отсутствие скрытых платежей
+			section.main-third(data-page-scroll)
+			section.footer
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
 		script(src="styles/default/js/main.js")
 		script(src="https://use.fontawesome.com/e04476514d.js")
