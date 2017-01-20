@@ -9,11 +9,77 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(href="styles/default/css/style.css",rel="stylesheet")
 	body
-		.main
-			.main__info
-				.main__text Продвижение<br>в&nbsp;интернете - <span>Ярко!</span>
-				.main__logo
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+		.plan
+		.plan2
+		.layout
+			section.header
+				.header-logo
+				.header-anchors
+					ul
+						li
+							a(href="#") Продвижение<br>сайтов под ключ
+						li
+							a(href="#") Классическое<br>продвижение сайтов
+						li
+							a(href="#") Разработка<br>сайтов
+				.header-geo
+					.header-geo__cities
+						ul
+							li.header-geo__city Москва
+							li.header-geo__city.active Казань
+							li.header-geo__city Россия
+					.header-geo__phone <span>+7 (843)</span> 555 05 05
+				.header-contact
+					.header-modals
+						.header-modals__search <i class="fa fa-search" aria-hidden="true"></i>
+						.header-modals__menu
+					.header-contact__item
+						a(href="").header-contact__link_call-me Перезвоните мне
+					.header-contact__item
+						a(href="").header-contact__link Контакты
+			section(data-page-scroll).main-content.main-content-first.active
+				.main-content__holder
+					.main-content__left
+						.main-content__title
+							h1 Решаем задачу увеличения&nbsp;продаж
+						.main-content__subtitle от 35 000 ₽ в месяц
+							form(action="").main-content-form
+								h2.main-content-form__title Готовы<br>к лучшим результатам?
+								input(type="text" placeholder="Имя").main-content-form__input
+								input(type="text" placeholder="Телефон").main-content-form__input
+								input(type="text" placeholder="Электронный адрес").main-content-form__input
+								input(type="text" placeholder="Ссылка на сайт").main-content-form__input
+								.main-content-form__submit
+									button.main-content-form__button Оставить заявку
+									button.main-content-form__button_filled Хочу со скидкой
+					.main-content__right
+						.main-content__item
+							h2 Ярко
+							.main-content__text Сделаем так, чтобы среди всех Ваших конкурентов заметили именно Вас
+						.main-content__item
+							h2 Эффективно
+							.main-content__text Задействуем все инструменты для достижения максимальных результатов
+						.main-content__item
+							h2 Ответственно
+							.main-content__text Работаем в соответствии с зафиксированными в договоре гарантированными показателями эффективности
+						.main-content-links
+							.main-content-links__pages
+								.main-content-links__label Узнать больше
+								ul
+									li.main-content-links__page
+										a(href="") Как это работает
+									li.main-content-links__page
+										a(href="") Почему это работает
+									li.main-content-links__page
+										a(href="") Портфолио
+							.main-content-links__news
+								.main-content-links__label Актуально
+							.main-content-links__partners
+								.main-content-links__label С нами работают
+
+
+
+			section.footer
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+		script(src="styles/default/js/main.js")
 		script(src="https://use.fontawesome.com/e04476514d.js")
-
-
