@@ -44,6 +44,8 @@ a
 	color #fff
 	text-decoration none
 	border-bottom 1px solid rgba(255,255,255,.3)
+	&:hover
+		border-bottom 1px solid rgba(255,255,255,.8)
 ul,li
 	margin 0
 	padding 0
@@ -637,11 +639,115 @@ h2
 
 
 
+.about
+	position absolute
+	background-size cover
+	background-position center center
+	color #fff
+	width 100%
+	height 100%
+	background-image url(images/about.jpg)
+	z-index 2
+.about-block
+	margin-top 120px
+.about-block-left
+	width 25%
+	float left
+	margin-right 30px
+.about-block-right
+	width 20%
+	float left
+	margin-top -30px
 
 
-
-
-
+.about-block-form
+	margin-top 10px
+	width 300px
+.about-block-form__input
+	background transparent
+	border 1px solid rgba(255,255,255,0.4)
+	border-radius 3px
+	margin-bottom 10px
+	color #fff
+	font-family 'Play'
+	width 100%
+	display block
+	font-size 15px
+	padding 10px 15px
+.about-block-form__textarea
+	background transparent
+	border 1px solid rgba(255,255,255,0.4)
+	border-radius 3px
+	margin-bottom 10px
+	color #fff
+	font-family 'Play'
+	width 100%
+	height 80px
+	display block
+	font-size 15px
+	padding 10px 15px
+.about-block-form__submit
+	display flex
+.about-block-form__button
+	background #cab403
+	border 1px solid #cab403
+	border-radius 3px
+	margin-bottom 10px
+	color #000
+	font-family 'Play'
+	font-size 13px
+	padding 10px 15px
+	box-sizing border-box
+	text-transform uppercase
+	cursor pointer
+	margin-right 5px
+	white-space nowrap
+.about-block-phone
+	font-size 21px
+	list-style-type none
+	margin-top 10px
+.about-block-phone span
+	font-size 12px
+	margin-top -10px
+	display inline-block
+	vertical-align middle
+.about-block-phone i
+	font-size 13px
+	margin-top -5px
+	color rgba(255,255,255,.4)
+	display inline-block
+	vertical-align middle
+	margin-left 5px
+.about-block-time
+	width 100px
+	height 100px
+	border 1px solid rgba(255,255,255,.4)
+	border-radius 50%
+	display inline-block
+	margin-right 20px
+.about-block-time
+	margin-top 30px
+	span
+		display block
+		width 70px
+		font-size 20px
+		text-align center
+		margin 0 auto
+		&:nth-child(1)
+			margin-top 20px
+			border-bottom 1px solid rgba(255,255,255,.4)
+			padding-bottom 5px
+			margin-bottom 5px
+.about-block-time:after
+	content "Режим работы"
+	font-size 13px
+	margin-top -5px
+	color rgba(255,255,255,.4)
+	display inline-block
+	vertical-align middle
+	margin-left 120px
+	white-space nowrap
+	margin-top -40px
 
 @media (min-width 1360px)
 	h1
@@ -650,10 +756,10 @@ h2
 		margin-top 140px
 		width 100%
 	.main-content-1-left
-			width 30%
+		width 30%
 	.main-content-1-right
-			width 50%
-			margin-top 80px
+		width 50%
+		margin-top 80px
 
 
 @media (max-width 1279px)
@@ -698,6 +804,21 @@ h2
 	.main-content-form__button_filled-y
 		font-size 10px
 		padding 10px 12px
+	.blog-block-article__text
+		font-size 13px
+		line-height 1.4
+	.news-block-article__text
+		font-size 13px
+		line-height 1.4
+	.news-block-also__text
+		font-size 12px
+		line-height 1.4
+	.blog-block-also__text
+		font-size 11px
+		line-height 1.4
+	.news-block-also__text
+		font-size 11px
+		line-height 1.4
 
 
 
