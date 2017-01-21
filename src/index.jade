@@ -37,14 +37,15 @@ html
 						a(href="").header-contact__link_call-me Перезвоните мне
 					.header-contact__item
 						a(href="").header-contact__link Контакты
-			section(data-page-scroll).main-content.main-content-first.active
-				.main-content__holder
-					.main-content__left
-						.main-content__title
+
+			section(data-page-scroll).main-content-1.active
+				.holder
+					.main-content-1__holder.clearfix
+						.main-content-1-left
 							h1 Решаем задачу увеличения&nbsp;продаж
-						.main-content__subtitle от 35 000 ₽ в месяц
+							.main-content-1__subtitle от 35 000 ₽ в месяц
 							form(action="").main-content-form
-								h2.main-content-form__title Готовы<br>к лучшим результатам?
+								.main-content-form__title Готовы<br>к лучшим результам?
 								input(type="text" placeholder="Имя").main-content-form__input
 								input(type="text" placeholder="Телефон").main-content-form__input
 								input(type="text" placeholder="Электронный адрес").main-content-form__input
@@ -52,33 +53,36 @@ html
 								.main-content-form__submit
 									button.main-content-form__button Оставить заявку
 									button.main-content-form__button_filled Хочу со скидкой
-					.main-content__right
-						.main-content__item
-							h2 Ярко
-							.main-content__text Сделаем так, чтобы среди всех Ваших конкурентов заметили именно Вас
-						.main-content__item
-							h2 Эффективно
-							.main-content__text Задействуем все инструменты для достижения максимальных результатов
-						.main-content__item
-							h2 Ответственно
-							.main-content__text Работаем в соответствии с зафиксированными в договоре гарантированными показателями эффективности
-						.main-content-links
-							.main-content-links__pages
-								.main-content-links__label Узнать больше
-								ul
-									li.main-content-links__page
-										a(href="") Как это работает
-									li.main-content-links__page
-										a(href="") Почему это работает
-									li.main-content-links__page
-										a(href="") Портфолио
-							.main-content-links__news
-								.main-content-links__label Актуально
-							.main-content-links__partners
-								.main-content-links__label С нами работают
 
-
-
+						.main-content-1-right
+							.main-content-1-advantages
+								.main-content-1-advantages__item
+									h2 Ярко
+									| Сделаем так, чтобы среди всех Ваших конкурентов заметили именно Вас
+								.main-content-1-advantages__item
+									h2 Эффективно
+									| Задействуем все инструменты для достижения максимальных результатов
+								.main-content-1-advantages__item
+									h2 Ответственно
+									| Работаем в соответствии с зафиксированными в договоре гарантированными показателями эффективности
+							.main-content-1-links.clearfix
+								.main-content-1-links__pages
+									.main-content-1-links__label Узнать больше
+									ul
+										li.main-content-1-links__page
+											a(href="") Как это работает
+										li.main-content-1-links__page
+											a(href="") Почему это работает
+										li.main-content-1-links__page
+											a(href="") Портфолио
+								.main-content-1-links__news
+									.main-content-1-links__label Актуально
+									.main-content-1-links__news-item
+										.main-content-1-links__news-date 11/12
+										.main-content-1-links__news-text
+											a(href="") Ребрендинг Next Promo: как это было и чем это закончилось
+								.main-content-1-links__partners
+									.main-content-1-links__label С нами работают
 			section.footer
 		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
 		script(src="styles/default/js/main.js")
