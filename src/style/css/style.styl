@@ -76,6 +76,7 @@ h2
 .holder
 	max-width 1440px
 	margin 0 auto
+	position relative
 .header
 	position absolute
 	z-index 100
@@ -749,6 +750,36 @@ h2
 	white-space nowrap
 	margin-top -40px
 
+
+
+.footer
+	font-size 13px
+	position absolute
+	bottom 0
+	left 0
+	right 0
+.footer-block
+	position relative
+	float right
+	max-width 1440px
+	margin 0 auto
+.footer-social
+	display inline-block
+	margin-right 10px
+.footer-social__item
+	list-style-type none
+	display inline-block
+	margin-right 10px
+.footer-social__link
+	border none
+	opacity .4
+	&:hover
+		opacity 1
+		border none
+.footer-copyright
+	opacity .4
+	display inline-block
+
 @media (min-width 1360px)
 	h1
 		font-size 46px
@@ -760,7 +791,29 @@ h2
 	.main-content-1-right
 		width 50%
 		margin-top 80px
-
+	.main-content-2-top__title
+		margin-top 50px
+	.main-content-2-right
+		width 70%
+		margin-top 40px
+	.main-content-1-links
+		margin-top 100px
+	.main-content-3-top__title
+		margin-top 70px
+	.news-block-article__text
+		height 400px
+	.news-block-also__list
+		height 400px
+	.news-block-blog__list
+		height 380px
+	.news-block
+		margin-top 160px
+	.blog-block
+		margin-top 150px
+	.blog-block-article__text
+		height 400px
+	.blog-block-also__list
+		height 400px
 
 @media (max-width 1279px)
 	.header-logo
@@ -804,6 +857,8 @@ h2
 	.main-content-form__button_filled-y
 		font-size 10px
 		padding 10px 12px
+	.main-content-1-links__page
+		font-size 13px
 	.blog-block-article__text
 		font-size 13px
 		line-height 1.4
@@ -820,11 +875,16 @@ h2
 		font-size 11px
 		line-height 1.4
 
+@media (max-width 1024px)
+	.main-content-1-left
+		width 30%
+	.main-content-1-right
+		width 60%
 
 
-@media (max-height 640px)
+@media (max-height 700px)
 	h1
-		font-size 36px
+		font-size 30px
 	h2
 		font-size 24px
 	.main-content-1__holder
@@ -837,3 +897,7 @@ h2
 		font-size 13px
 	.main-content-3-info
 		font-size 13px
+	.main-content-3-left
+		margin-top -30px
+	.blog-block-also__list
+		height 240px
