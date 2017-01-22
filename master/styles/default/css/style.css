@@ -1313,6 +1313,9 @@ h3 {
   .main-content-1-right {
     width: 60%;
   }
+  .main-content-2-right {
+    margin-top: 10px;
+  }
 }
 @media (max-height: 700px) {
   h1 {
