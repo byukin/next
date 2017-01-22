@@ -15,7 +15,7 @@ var appSite = {
   		$(".news-block-article__text").customScrollbar();
 	},
 	bindSlickSlider: function () {
-		$('.potfolio-sites-list').slick({
+		$('[data-slick-slider]').slick({
 				infinite: true,
 				slidesToShow: 4,
 				slidesToScroll: 1,
@@ -31,6 +31,23 @@ var appSite = {
 				      }
 				    },
 				  ]
-			});
+		});
+		$('[data-slick-slider-seo]').slick({
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			  	adaptiveHeight: true,
+			  	prevArrow: '.potfolio-sites-previous',
+			  	nextArrow: '.potfolio-sites-next',
+			  	responsive: [
+				    {
+				      breakpoint: 1140,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1
+				      }
+				    },
+				  ]
+		});
 	},
 };
