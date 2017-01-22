@@ -1098,6 +1098,15 @@ h3 {
 .potfolio-seo__sert-item img {
   width: 100%;
 }
+.potfolio-block-menu {
+  float: right;
+  margin-top: -80px;
+}
+.potfolio-block-menu__item {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 15px;
+}
 @media (min-width: 1440px) {
   h1 {
     font-size: 46px;
