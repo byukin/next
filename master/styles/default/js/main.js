@@ -1,22 +1,16 @@
 $(document).ready(function() {
- 	appSite.init();
+	$("[data-custom-scroll]").mCustomScrollbar({
+					live:true,
+					theme:"rounded"
+				});
 });
 
 
 var appSite = {
 	init: function() {
-		appSite.bindFullPageScrolling();
+		appSite.bindCustomScrollBars();
 	},
-	bindFullPageScrolling: function () {
-		var lastScrollTop = 0;
-		$(window).scroll(function(event){
-		   var st = $(this).scrollTop();
-		   if (st > lastScrollTop){
-			   $('[data-page-scroll]').has('.active').removeClass('active');
-		   } else {
-			  // upscroll code
-		   }
-		   lastScrollTop = st;
-		});
+	bindCustomScrollBars: function () {
+  		$(".news-block-article__text").customScrollbar();
 	},
 };
